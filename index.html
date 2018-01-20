@@ -3,7 +3,7 @@
 <body>
 	<input id="arg1" value="1">
 
-	<select id='operatior'>
+	<select id='operator'>
 		<option>+</option>
 		<option>-</option>
 	</select>
@@ -29,7 +29,7 @@ window.addEventListener("DOMContentLoaded", function() {
   console.log("DOM fully loaded and parsed");
   $('#calculate').addEventListener('click', function() {
 	// TODO validate args
-	var evalText = val('#arg1') + val('#operatior')  +  val('#arg2');
+	var evalText = val('#arg1') + val('#operator')  +  val('#arg2');
 	var result = eval(evalText);
     $('#result').innerText = evalText + " = " + result;
   });
