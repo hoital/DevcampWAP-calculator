@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<input id="arg1" value="1">
+
+	<select id='operatior'>
+		<option>+</option>
+		<option>-</option>
+	</select>
+
+	<input id="arg2" value="2">
+
+	<button id="calculate">CAL</button>
+
+	<div id="result"></div>
+
+</body>
+
+<script>
+function $(selectors) {
+    return document.querySelector(selectors);
+}
+
+function val(selectors) {
+    return $(selectors).value;
+}
+
+window.addEventListener("DOMContentLoaded", function() {
+  console.log("DOM fully loaded and parsed");
+  $('#calculate').addEventListener('click', function() {
+	// TODO validate args
+	var evalText = val('#arg1') + val('#operatior')  +  val('#arg2');
+	var result = eval(evalText);
+    $('#result').innerText = evalText + " = " + result;
+  });
+});
+
+</script>
+
+</html>
